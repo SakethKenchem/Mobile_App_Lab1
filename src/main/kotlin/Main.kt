@@ -1,1 +1,47 @@
-//Lab1
+//https://docs.google.com/document/d/1e2AQSSqJmqv7uwNgJjJbOsn64pQqZ9DW6vjsPcdRLYY/edit?usp=sharing
+/*
+Andrew Mutero - 150736
+Saketh Kenchem - 152324
+Murji Viqarhussein - 193642
+Mark Kipruto - 169386
+Lewis Kamunjeru - 155669
+ */
+
+import java.util.Scanner
+
+
+const val APP_NAME = "Health & Fitness Tracker"
+const val STEP_GOAL = 10000
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    println("=== Welcome to $APP_NAME ===\n")
+
+    //Profile Setup
+    print("Enter your name: ")
+    val userName: String = scanner.nextLine()
+
+    print("Enter weight in kg (e.g., 65.0): ")
+    val weightKg: Double = scanner.nextDouble()
+
+    print("Select Goal (1: Maintain, 2: Gain, 3: Lose): ")
+    val goalChoice: Int = scanner.nextInt()
+
+    //Set Goals
+    var goalType = "Weight Maintenance"
+    var targetCalories = 2500
+
+    if (goalChoice == 2) {
+        goalType = "Weight Gain"
+        targetCalories = if (weightKg > 60) 4500 else 3000
+    } else if (goalChoice == 3) {
+        goalType = "Weight Loss"
+        targetCalories = if (weightKg > 70) 3500 else 2000
+    } else {
+        targetCalories = if (weightKg > 70) 4000 else 2500
+    }
+
+    println("\nTarget for $userName ($goalType): $targetCalories kcal\n")
+
+}
