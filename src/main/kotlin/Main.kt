@@ -42,6 +42,22 @@ fun main() {
 
     println("\nTarget for $userName ($goalType): $targetCalories kcal\n")
 
+    //Meal Tracking
+    val meals = mutableListOf<String>()
+    var caloriesIn = 0
+    print("How many meals/snacks today? ")
+    val mealCount = scanner.nextInt()
+    scanner.nextLine()
+    for (i in 1..mealCount) {
+        print("Meal $i name: ")
+        val name = scanner.nextLine()
+        print("Calories in $name: ")
+        val cals = scanner.nextInt()
+        scanner.nextLine() // Clear buffer
+        meals.add("$name (+$cals kcal)")
+        caloriesIn += cals
+    }
+
     //Workout Tracking
     val workouts = mutableListOf<String>()
     var caloriesOut = 0
