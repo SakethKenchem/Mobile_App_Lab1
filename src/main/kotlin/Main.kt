@@ -9,14 +9,12 @@ Lewis Kamunjeru - 155669
 
 import java.util.Scanner
 
-
-const val APP_NAME = "Health & Fitness Tracker"
 const val STEP_GOAL = 10000
 
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    println("=== Welcome to $APP_NAME ===\n")
+    println("=== Welcome to Health & Fitness Tracker ===\n")
 
     //Profile Setup
     print("Enter your name: ")
