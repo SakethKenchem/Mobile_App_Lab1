@@ -45,7 +45,7 @@ fun main() {
     //Meal Tracking
     val meals = mutableListOf<String>()
     var caloriesIn = 0
-    print("How many meals/snacks today? ")
+    print("How many meals/snacks today ")
     val mealCount = scanner.nextInt()
     scanner.nextLine()
     for (i in 1..mealCount) {
