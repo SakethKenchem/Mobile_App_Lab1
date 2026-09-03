@@ -41,5 +41,21 @@ fun main() {
     }
 
     println("\nTarget for $userName ($goalType): $targetCalories kcal\n")
+      
+// Step assessment
+if (steps >= STEP_GOAL) {
+    println("Steps: Awesome job hitting your step goal!")
+} else {
+    println("Steps: Keep walking! You need ${STEP_GOAL - steps} more steps.")
+}
+
+// Calorie assessment
+if (goalChoice == 3 && netCalories <= targetCalories) {
+    println("Calories: Great job staying under your limit for weight loss!")
+} else if (goalChoice != 3 && netCalories >= targetCalories) {
+    println("Calories: Great job hitting your intake target!")
+} else {
+    println("Calories: Target missed today. Adjust your meals or workouts tomorrow.")
+}
 
 }
