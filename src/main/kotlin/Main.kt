@@ -41,7 +41,33 @@ fun main() {
     }
 
     println("\nTarget for $userName ($goalType): $targetCalories kcal\n")
-      
+
+    //Workout Tracking
+    val workouts = mutableListOf<String>()
+    var caloriesOut = 0
+
+    println("How many workouts today? (Enter 0 if none): ")
+
+    val workoutCount = scanner.nextInt()
+    scanner.nextLine()
+
+    for (i in 1..workoutCount) {
+        print("Workout $i name: ")
+        val name = scanner.nextLine()
+
+        print("Calories burned doing $name: ")
+        val cals = scanner.nextInt()
+
+        scanner.nextLine()
+
+        workouts.add("$name (-$cals kcal)")
+        caloriesOut += cals     }
+
+    //Step Tracking
+    println("Steps walked today: ")
+
+    val steps = scanner.nextInt()
+
 // Step assessment
 if (steps >= STEP_GOAL) {
     println("Steps: Awesome job hitting your step goal!")
