@@ -68,6 +68,23 @@ fun main() {
 
     val steps = scanner.nextInt()
 
+    //Daily Summary
+    val netCalories = caloriesIn - caloriesOut
+    println("\n=== DAILY SUMMARY ===")
+    println("Meals:")
+    for (meal in meals) {
+        println(" - $meal")
+    }
+    println("\nWorkouts:")
+    for (workout in workouts) {
+        println(" - $workout")
+    }
+    println("\nNet Calories: $netCalories kcal (Goal: $targetCalories kcal)")
+    println("Steps Taken: $steps / $STEP_GOAL")
+
+    //Final Assessment
+    println("\n=== ASSESSMENT ===")
+
 // Step assessment
 if (steps >= STEP_GOAL) {
     println("Steps: Awesome job hitting your step goal!")
